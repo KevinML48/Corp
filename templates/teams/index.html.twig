@@ -13,180 +13,44 @@
   <a href="/">Home</a>
 </button>
 
-<section>
-  <div class="container flow-content">
-    <h2 class="section-title">Notre équipe</h2>
-    <ul role="list" class="grid">
-      <li>
-        <article class="card" data-visible="false">
-          <div class="card__front flow-content">
-            <img class="card__img mx-auto" src="https://play-lh.googleusercontent.com/ZejAkIHFw3knpmq77o6jJd9yDmzoqWOU-GmHZDIpxMjm8V30_WbR06VASibWPSxjc-W1=w240-h480-rw" alt="Yusoh" />
-            <div class="flow-content" data-spacing="sm">
-              <p class="card__name">Yusoh</p>
-              <p class="card__position">Developper Web</p>
+  <div class="home-container">
+        <div class="profile-card">
+            <div class="img">
+                <img src="data:image/png;base64,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">
             </div>
-          </div>
-          <div class="card__back flow-content">
-            <p class="card__name">Yusoh</p>
-            <q>Yusoh, 19 ans, développeur Full Stack passionné et polyvalent.</q>
-            <ul role="list" class="card__social flex-group">
-              <li>
-                <a href="https://github.com/KevinML48">
+            <div class="caption">
+                <h3>Yusoh</h3>
+                <p>Full Stack Developer</p>
+                <div class="social-links">
+                    <a href="https://github.com/KevinML48"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card">
+            <div class="img">
+                <img src="data:image/png;base64,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">
+            </div>
+            <div class="caption">
+                <h3>En recherche</h3>
+                <p>Front End Developer</p>
+                <div class="social-links">
+                   <i class="fab fa-github"></i>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card">
+            <div class="img">
+                <img src="data:image/png;base64,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">
+            </div>
+            <div class="caption">
+                <h3>En recherche</h3>
+                <p>Back End Developer</p>
+                <div class="social-links">
                   <i class="fab fa-github"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <footer class="card__footer">
-            <button data-card-controller class="card__toggle">
-              <i class="fas fa-plus card__toggle-icon"></i>
-            </button>
-          </footer>
-        </article>
-      </li>
-
-      <li>
-        <article class="card" data-visible="false">
-          <div class="card__front flow-content">
-            <img class="card__img mx-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-IYoGcd09JTLZ_wBlUhY4OQ3ozwAsXqa3MTuzwtUFgy3vv6kcQBwd7eMJqXSG_epDzq4&usqp=CAU" alt="En recherche" />
-            <div class="flow-content" data-spacing="sm">
-              <p class="card__name">En recherche</p>
-              <p class="card__position">...</p>
+                </div>
             </div>
-          </div>
-          <div class="card__back flow-content">
-            <p class="card__name"></p>
-            <q></q>
-            <ul role="list" class="card__social flex-group">
-              <li>
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <footer class="card__footer">
-            <button data-card-controller class="card__toggle">
-              <i class="fas fa-plus card__toggle-icon"></i>
-            </button>
-          </footer>
-        </article>
-      </li>
-
-      <li>
-        <article class="card" data-visible="false">
-          <div class="card__front flow-content">
-            <img class="card__img mx-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-IYoGcd09JTLZ_wBlUhY4OQ3ozwAsXqa3MTuzwtUFgy3vv6kcQBwd7eMJqXSG_epDzq4&usqp=CAU" alt="En recherche" />
-            <div class="flow-content" data-spacing="sm">
-              <p class="card__name">En recherche</p>
-              <p class="card__position">...</p>
-            </div>
-          </div>
-          <div class="card__back flow-content">
-            <p class="card__name"></p>
-            <q></q>
-            <ul role="list" class="card__social flex-group">
-              <li>
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <footer class="card__footer">
-            <button data-card-controller class="card__toggle">
-              <i class="fas fa-plus card__toggle-icon"></i>
-            </button>
-          </footer>
-        </article>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<section>
-  <div class="container flow-content">
-    <h2 class="section-title">Notre équipe de Communication</h2>
-    <ul role="list" class="grid">
-      <li>
-        <article class="card" data-visible="false">
-          <div class="card__front flow-content">
-            <img class="card__img mx-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-IYoGcd09JTLZ_wBlUhY4OQ3ozwAsXqa3MTuzwtUFgy3vv6kcQBwd7eMJqXSG_epDzq4&usqp=CAU" alt="En recherche" />
-            <div class="flow-content" data-spacing="sm">
-              <p class="card__name">En recherche</p>
-              <p class="card__position">...</p>
-            </div>
-          </div>
-          <div class="card__back flow-content">
-            <p class="card__name"></p>
-            <q></q>
-            <ul role="list" class="card__social flex-group">
-              <li>
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <footer class="card__footer">
-            <button data-card-controller class="card__toggle">
-              <i class="fas fa-plus card__toggle-icon"></i>
-            </button>
-          </footer>
-        </article>
-      </li>
-
-      <li>
-        <article class="card" data-visible="false">
-          <div class="card__front flow-content">
-            <img class="card__img mx-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-IYoGcd09JTLZ_wBlUhY4OQ3ozwAsXqa3MTuzwtUFgy3vv6kcQBwd7eMJqXSG_epDzq4&usqp=CAU" alt="En recherche" />
-            <div class="flow-content" data-spacing="sm">
-              <p class="card__name">En recherche</p>
-              <p class="card__position">...</p>
-            </div>
-          </div>
-          <div class="card__back flow-content">
-            <p class="card__name"></p>
-            <q></q>
-            <ul role="list" class="card__social flex-group">
-              <li>
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <footer class="card__footer">
-            <button data-card-controller class="card__toggle">
-              <i class="fas fa-plus card__toggle-icon"></i>
-            </button>
-          </footer>
-        </article>
-      </li>
-    </ul>
-  </div>
-</section>
-
+        </div>
+    </div>
 
 {% endblock %}
 
@@ -194,24 +58,5 @@
 {{ parent() }}
 <script>
 
-// Inspiration -  Frontend Mentor
-// https://www.frontendmentor.io/challenges/myteam-multipage-website-mxlEauvW
-const cardControllers = document.querySelectorAll("[data-card-controller]");
-
-cardControllers.forEach(controller => {
-  controller.addEventListener("click", (e) => {
-    const card = e.currentTarget.parentElement.parentElement;
-    const isVisible = card.dataset.visible;
-
-    if (isVisible === "false") {
-      card.setAttribute("data-visible", true);
-    } else {
-      card.setAttribute("data-visible", false);
-    }
-  })
-})
-
-
     </script>
 {% endblock %}
-

@@ -100,7 +100,6 @@ p{
 }
 .modal-btn:checked + label:after{
   transition: opacity 300ms 300ms ease, transform 300ms 300ms ease, background-color 250ms linear, color 250ms linear;
-  opacity: 1;
   pointer-events: auto;
 }
 
