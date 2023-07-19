@@ -1,0 +1,126 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/services2.css') }}">
+{% endblock %}
+
+{% block body %}
+
+{% include 'services/services.html.twig' %}
+
+<div id="cards">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-image">
+        <img src="{{ asset('images/Conception_de_sites_web.png') }}" alt="Conception de sites web">
+      </div>
+      <div class="card-info-wrapper">
+        <div class="card-info">
+          <div class="card-info-title">
+            <h3>Conception de sites web</h3>  
+            <h4>Création web professionnelle.</h4>
+          </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <div class="card-image">
+        <img src="{{ asset('images/Développement_web_sur_mesure.png') }}" alt="Développement web sur mesure">
+      </div>
+      <div class="card-info-wrapper">
+        <div class="card-info">
+          <div class="card-info-title">
+            <h3>Développement web sur mesure</h3>  
+            <h4>Solutions web personnalisées.</h4>
+          </div>    
+        </div>  
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <div class="card-image">
+        <img src="{{ asset('images/marketingDigital.png') }}" alt="Marketing numérique">
+      </div>
+      <div class="card-info-wrapper">
+        <div class="card-info">
+          <div class="card-info-title">
+            <h3>Marketing numérique</h3>  
+            <h4>Visibilité en ligne optimisée.</h4>
+          </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <div class="card-image">
+        <img src="{{ asset('images/Services_de_maintenance_et_de_support.png') }}" alt="Services de maintenance et de support">
+      </div>
+      <div class="card-info-wrapper">
+        <div class="card-info">
+          <div class="card-info-title">
+            <h3>Services de maintenance et de support</h3>  
+            <h4>Promotion en ligne stratégique.</h4>
+          </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <div class="card-image">
+        <img src="{{ asset('images/Analyse_et_suivi_des_performances.png') }}" alt="Analyse et suivi des performances">
+      </div>
+      <div class="card-info-wrapper">
+        <div class="card-info">
+          <div class="card-info-title">
+            <h3>Analyse et suivi des performances</h3>  
+            <h4>Mesure de performance web.</h4>
+          </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <div class="card-image">
+        <img src="{{ asset('images/Rapidité_de_chargement_améliorée.png') }}" alt="Création de contenu">
+      </div>
+      <div class="card-info-wrapper">
+        <div class="card-info">
+          <div class="card-info-title">
+            <h3>Création de contenu</h3>  
+            <h4>Rapidité de chargement améliorée.</h4>
+          </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script>
+
+document.getElementById("cards").onmousemove = e => {
+  for(const card of document.getElementsByClassName("card")) {
+    const rect = card.getBoundingClientRect(),
+          x = e.clientX - rect.left,
+          y = e.clientY - rect.top;
+
+    card.style.setProperty("--mouse-x", `${x}px`);
+    card.style.setProperty("--mouse-y", `${y}px`);
+  };
+}
+    </script>
+{% endblock %}

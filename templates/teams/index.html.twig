@@ -1,0 +1,217 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/team.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<button class="button-home">
+  <a href="/">Home</a>
+</button>
+
+<section>
+  <div class="container flow-content">
+    <h2 class="section-title">Notre équipe</h2>
+    <ul role="list" class="grid">
+      <li>
+        <article class="card" data-visible="false">
+          <div class="card__front flow-content">
+            <img class="card__img mx-auto" src="https://play-lh.googleusercontent.com/ZejAkIHFw3knpmq77o6jJd9yDmzoqWOU-GmHZDIpxMjm8V30_WbR06VASibWPSxjc-W1=w240-h480-rw" alt="Yusoh" />
+            <div class="flow-content" data-spacing="sm">
+              <p class="card__name">Yusoh</p>
+              <p class="card__position">Developper Web</p>
+            </div>
+          </div>
+          <div class="card__back flow-content">
+            <p class="card__name">Yusoh</p>
+            <q>Yusoh, 19 ans, développeur Full Stack passionné et polyvalent.</q>
+            <ul role="list" class="card__social flex-group">
+              <li>
+                <a href="https://github.com/KevinML48">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <footer class="card__footer">
+            <button data-card-controller class="card__toggle">
+              <i class="fas fa-plus card__toggle-icon"></i>
+            </button>
+          </footer>
+        </article>
+      </li>
+
+      <li>
+        <article class="card" data-visible="false">
+          <div class="card__front flow-content">
+            <img class="card__img mx-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-IYoGcd09JTLZ_wBlUhY4OQ3ozwAsXqa3MTuzwtUFgy3vv6kcQBwd7eMJqXSG_epDzq4&usqp=CAU" alt="En recherche" />
+            <div class="flow-content" data-spacing="sm">
+              <p class="card__name">En recherche</p>
+              <p class="card__position">...</p>
+            </div>
+          </div>
+          <div class="card__back flow-content">
+            <p class="card__name"></p>
+            <q></q>
+            <ul role="list" class="card__social flex-group">
+              <li>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <footer class="card__footer">
+            <button data-card-controller class="card__toggle">
+              <i class="fas fa-plus card__toggle-icon"></i>
+            </button>
+          </footer>
+        </article>
+      </li>
+
+      <li>
+        <article class="card" data-visible="false">
+          <div class="card__front flow-content">
+            <img class="card__img mx-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-IYoGcd09JTLZ_wBlUhY4OQ3ozwAsXqa3MTuzwtUFgy3vv6kcQBwd7eMJqXSG_epDzq4&usqp=CAU" alt="En recherche" />
+            <div class="flow-content" data-spacing="sm">
+              <p class="card__name">En recherche</p>
+              <p class="card__position">...</p>
+            </div>
+          </div>
+          <div class="card__back flow-content">
+            <p class="card__name"></p>
+            <q></q>
+            <ul role="list" class="card__social flex-group">
+              <li>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <footer class="card__footer">
+            <button data-card-controller class="card__toggle">
+              <i class="fas fa-plus card__toggle-icon"></i>
+            </button>
+          </footer>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="container flow-content">
+    <h2 class="section-title">Notre équipe de Communication</h2>
+    <ul role="list" class="grid">
+      <li>
+        <article class="card" data-visible="false">
+          <div class="card__front flow-content">
+            <img class="card__img mx-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-IYoGcd09JTLZ_wBlUhY4OQ3ozwAsXqa3MTuzwtUFgy3vv6kcQBwd7eMJqXSG_epDzq4&usqp=CAU" alt="En recherche" />
+            <div class="flow-content" data-spacing="sm">
+              <p class="card__name">En recherche</p>
+              <p class="card__position">...</p>
+            </div>
+          </div>
+          <div class="card__back flow-content">
+            <p class="card__name"></p>
+            <q></q>
+            <ul role="list" class="card__social flex-group">
+              <li>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <footer class="card__footer">
+            <button data-card-controller class="card__toggle">
+              <i class="fas fa-plus card__toggle-icon"></i>
+            </button>
+          </footer>
+        </article>
+      </li>
+
+      <li>
+        <article class="card" data-visible="false">
+          <div class="card__front flow-content">
+            <img class="card__img mx-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-IYoGcd09JTLZ_wBlUhY4OQ3ozwAsXqa3MTuzwtUFgy3vv6kcQBwd7eMJqXSG_epDzq4&usqp=CAU" alt="En recherche" />
+            <div class="flow-content" data-spacing="sm">
+              <p class="card__name">En recherche</p>
+              <p class="card__position">...</p>
+            </div>
+          </div>
+          <div class="card__back flow-content">
+            <p class="card__name"></p>
+            <q></q>
+            <ul role="list" class="card__social flex-group">
+              <li>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <footer class="card__footer">
+            <button data-card-controller class="card__toggle">
+              <i class="fas fa-plus card__toggle-icon"></i>
+            </button>
+          </footer>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script>
+
+// Inspiration -  Frontend Mentor
+// https://www.frontendmentor.io/challenges/myteam-multipage-website-mxlEauvW
+const cardControllers = document.querySelectorAll("[data-card-controller]");
+
+cardControllers.forEach(controller => {
+  controller.addEventListener("click", (e) => {
+    const card = e.currentTarget.parentElement.parentElement;
+    const isVisible = card.dataset.visible;
+
+    if (isVisible === "false") {
+      card.setAttribute("data-visible", true);
+    } else {
+      card.setAttribute("data-visible", false);
+    }
+  })
+})
+
+
+    </script>
+{% endblock %}
+

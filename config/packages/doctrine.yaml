@@ -1,46 +1,47 @@
 doctrine:
     dbal:
-        url: '%env(resolve:DATABASE_URL)%'
+        url: '%env(resolve:DATABASE_URL)%'  # URL de connexion à la base de données
 
         # IMPORTANT: You MUST configure your server version,
         # either here or in the DATABASE_URL env var (see .env file)
         #server_version: '15'
+
     orm:
-        auto_generate_proxy_classes: true
-        enable_lazy_ghost_objects: true
-        report_fields_where_declared: true
-        validate_xml_mapping: true
-        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
-        auto_mapping: true
+        auto_generate_proxy_classes: true  # Génère automatiquement les classes proxy
+        enable_lazy_ghost_objects: true  # Active les objets fantômes (ghost objects) paresseux
+        report_fields_where_declared: true  # Rapporte les champs déclarés dans les entités
+        validate_xml_mapping: true  # Valide la configuration de mappage XML
+        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware  # Stratégie de nommage pour les tables
+        auto_mapping: true  # Active le mappage automatique des entités
         mappings:
             App:
                 is_bundle: false
-                dir: '%kernel.project_dir%/src/Entity'
-                prefix: 'App\Entity'
+                dir: '%kernel.project_dir%/src/Entity'  # Répertoire des entités
+                prefix: 'App\Entity'  # Préfixe pour les classes d'entités
                 alias: App
 
 when@test:
     doctrine:
         dbal:
             # "TEST_TOKEN" is typically set by ParaTest
-            dbname_suffix: '_test%env(default::TEST_TOKEN)%'
+            dbname_suffix: '_test%env(default::TEST_TOKEN)%'  # Suffixe pour la base de données de test
 
 when@prod:
     doctrine:
         orm:
-            auto_generate_proxy_classes: false
-            proxy_dir: '%kernel.build_dir%/doctrine/orm/Proxies'
+            auto_generate_proxy_classes: false  # Désactive la génération automatique des classes proxy en production
+            proxy_dir: '%kernel.build_dir%/doctrine/orm/Proxies'  # Répertoire pour les classes proxy
             query_cache_driver:
                 type: pool
-                pool: doctrine.system_cache_pool
+                pool: doctrine.system_cache_pool  # Pool de cache pour les requêtes
             result_cache_driver:
                 type: pool
-                pool: doctrine.result_cache_pool
+                pool: doctrine.result_cache_pool  # Pool de cache pour les résultats de requêtes
 
     framework:
         cache:
             pools:
                 doctrine.result_cache_pool:
-                    adapter: cache.app
+                    adapter: cache.app  # Adaptateur de cache pour le pool doctrine.result_cache_pool
                 doctrine.system_cache_pool:
-                    adapter: cache.system
+                    adapter: cache.system  # Adaptateur de cache pour le pool doctrine.system_cache_pool

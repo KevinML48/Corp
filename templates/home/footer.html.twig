@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{% endblock %}
+
+{% block body %}
+	<div class="section full-height">
+		<input class="modal-btn" type="checkbox" id="modal-btn" name="modal-btn"/>
+		<label for="modal-btn">En savoir plus !</label>
+		<div class="modal">
+			<div class="modal-wrap">
+				<img src="https://allhcorp.com/wp-content/uploads/2022/05/Image-Design.png" alt="">
+				<p>Notre équipe de développement gratuit est composée de développeurs talentueux et passionnés. <br><br>Nous offrons nos services gratuitement pour soutenir les projets à but non lucratif et les initiatives communautaires. <br><br>Contactez-nous pour discuter de votre projet et voir comment nous pouvons vous aider.</p>
+				<label for="modal-btn" class="close-btn"><i class="fas fa-times"></i></label>
+			</div>
+		</div>
+	</div>
+
+	<div class='cursor' id="cursor"></div>
+	<div class='cursor2' id="cursor2"></div>
+	<div class='cursor3' id="cursor3"></div>
+{% endblock %}
